@@ -63,9 +63,6 @@ export async function GET(
         last_viewed_at: new Date().toISOString()
       })
       .eq('id', listData.id)
-      .then(() => {})
-      .catch(() => {})
-
     return NextResponse.json({
       list: listData,
       books: booksData || [],
