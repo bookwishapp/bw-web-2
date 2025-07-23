@@ -78,7 +78,7 @@ export async function GET(
     if (gifts && gifts.length > 0) {
       items = gifts.map(gift => ({
   id: gift.id,
-  book_title: gift.books?.title || 'Unknown Title',
+book_title: gift.books?.
   book_author: gift.books?.author || 'Unknown Author',
   book_isbn: gift.books?.isbn13 || gift.books?.isbn || 'No ISBN available',
   book_cover_url: gift.books?.cover_url || gift.books?.thumbnail_url,
