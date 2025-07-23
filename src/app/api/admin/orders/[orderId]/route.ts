@@ -78,10 +78,10 @@ export async function GET(
     if (gifts && gifts.length > 0) {
       items = gifts.map(gift => ({
   id: gift.id,
-  book_title: gift.books?.title || 'Unknown Title',
-  book_author: gift.books?.author || 'Unknown Author',
-  book_isbn: gift.books?.isbn13 || gift.books?.isbn || 'No ISBN available',
-  book_cover_url: gift.books?.cover_url || gift.books?.thumbnail_url,
+book_title: gift.books?.[0]?.title || 'Unknown Title',
+book_author: gift.books?.[0]?.author || 'Unknown Author',
+book_isbn: gift.books?.[0]?.isbn13 || gift.books?.[0]?.isbn || 'No ISBN available',
+book_cover_url: gift.books?.[0]?.cover_url || gift.books?.[0]?.thumbnail_url,
   quantity: 1,
   price: order.subtotal || 0,
   gift_message: gift.message
