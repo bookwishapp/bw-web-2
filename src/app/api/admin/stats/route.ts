@@ -5,6 +5,7 @@ import { supabaseAdmin } from '@/lib/supabase'
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: NextRequest) {
+  try {
     // Simple admin check
     const adminAuth = request.headers.get('admin-auth')
     if (adminAuth !== 'bookwish-admin-2025') {

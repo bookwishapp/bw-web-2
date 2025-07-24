@@ -1,13 +1,11 @@
 // src/app/api/admin/orders/route.ts
-// src/app/api/admin/orders/route.ts
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
 export const dynamic = 'force-dynamic'
 
 export async function GET(request: NextRequest) {
-  // ... rest of your existing code stays the same
-  //   try {
+  try {
     // Simple admin check - in production you'd want proper JWT validation
     const adminAuth = request.headers.get('admin-auth')
     if (adminAuth !== 'bookwish-admin-2025') {
