@@ -1,6 +1,10 @@
 'use client'
 
 import { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
+import Link from 'next/link'
+// Add these icon imports (adjust based on what icon library you're using)
+import { CheckCircleIcon, GiftIcon } from '@heroicons/react/24/outline'
 
 export default function OrderSuccess() {
   return (
@@ -11,7 +15,7 @@ export default function OrderSuccess() {
 }
 
 function OrderSuccessContent() {
-  const searchParams = useSearchParams() // Your existing code here
+  const searchParams = useSearchParams()
   const orderId = searchParams.get('order')
 
   return (
