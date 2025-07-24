@@ -47,7 +47,8 @@ export default function WishlistView({ data, shareCode }: Props) {
     }
 
     setCart([...cart, cartItem])
-setSelectedBooks(new Set(Array.from(selectedBooks).concat(book.id)))    toast.success(`Added "${book.title}" to cart`)
+setSelectedBooks(new Set(Array.from(selectedBooks).concat(book.id)))
+    toast.success(`Added "${book.title}" to cart`)
   }
 
   const removeFromCart = (bookId: string) => {
