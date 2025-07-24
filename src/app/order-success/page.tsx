@@ -1,11 +1,17 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
-import { CheckCircleIcon, GiftIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
+import { Suspense } from 'react'
 
-export default function OrderSuccessPage() {
-  const searchParams = useSearchParams()
+export default function OrderSuccess() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OrderSuccessContent />
+    </Suspense>
+  )
+}
+
+function OrderSuccessContent() {
+  const searchParams = useSearchParams() // Your existing code here
   const orderId = searchParams.get('order')
 
   return (
